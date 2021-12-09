@@ -40,6 +40,7 @@ public class HomePage extends BasePage{
     }
 
     void checkSearchBarDisplay() {
+
         wait.forElementToBeDisplayed(10, this.searchInput, "Search Bar");
     }
 
@@ -48,7 +49,9 @@ public class HomePage extends BasePage{
         this.searchInput.sendKeys(Keys.ENTER);
     }
     public void clicksLinkByXpath(String xpath) throws InterruptedException {
+
         WebElement e = driver.findElement(By.xpath(xpath));
+
         Thread.sleep(10000);
         e.click();
         Thread.sleep(2000000);
@@ -62,5 +65,9 @@ public class HomePage extends BasePage{
     public void printsTheAuthorByXpath(String xpath) {
         WebElement i = driver.findElement(By.xpath("//*[@id=\"ArticleContent\"]/p[6]"));
         i.getText();
+    }
+    public void holdon (String minutes) throws InterruptedException{
+        System.out.println("KEKW");
+        Thread.sleep(1000);
     }
 }
